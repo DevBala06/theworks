@@ -62,7 +62,7 @@ const StatsSection = () => {
           <Image
             src={laptop}
             alt="Mobile device"
-            className="md:w-80 hidden  h-auto ml-auto"
+            className="md:w-80 max-lg:scale-70 max-md:scale-90 max-md:mr-6 max-md:mt-24 scale-100 max-lg:mt-4 md:flex   h-auto ml-auto"
           />
           
         </motion.div>

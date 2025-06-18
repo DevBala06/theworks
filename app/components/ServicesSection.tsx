@@ -15,10 +15,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-        <div className='scale-65'>
-      <SectionHeader headline='Clean Idea and unique Design' label='SERVICE'/>
-      </div>
+    <section className="py-20  relative overflow-hidden">
+        
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         
 
@@ -48,8 +46,14 @@ const ServicesSection = () => {
               />
             </div>
           </motion.div>
+          
 
-          <div className="grid grid-cols-2 scale-90 ">
+          <div className='flex flex-col justify-center items-center'>
+          <div className='scale-65  block  '>
+      <SectionHeader headline='Clean Idea and unique Design' label='SERVICE'/>
+      </div>
+      <div className="grid grid-cols-2 scale-90 ">
+          
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -73,6 +77,8 @@ const ServicesSection = () => {
               </motion.div>
             ))}
           </div>
+          </div>
+          
         </div>
       </div>
     </section>

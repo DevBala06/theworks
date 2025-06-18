@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import logo from '@/public/image-removebg-preview.png';
 
+
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navItems = ['Home', 'Service', 'About', 'Portfolio', 'Page', 'Blog', 'Contact'];
@@ -23,7 +24,7 @@ const Navigation = () => {
           </span>
         </motion.div>
 
-        <div className="hidden md:flex md:mr-80 space-x-8">
+        <div className="hidden lg:flex md:mr-80 space-x-8">
           {navItems.map((item, index) => (
             <motion.a
               key={item}
@@ -39,7 +40,7 @@ const Navigation = () => {
           ))}
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-white focus:outline-none cursor-pointer"
@@ -61,7 +62,7 @@ const Navigation = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-[#2e3437] mt-2 px-4 py-4 rounded-lg space-y-4"
+            className="lg:hidden bg-[#2e3437] mt-2 px-4 py-4 rounded-lg space-y-4"
           >
             {navItems.map((item) => (
               <motion.a

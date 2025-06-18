@@ -35,7 +35,7 @@ const FeaturesSection = () => {
                           initial={{ scale: 0, rotate: 0 }}
                           animate={{ scale: 1, rotate: 360 }}
                           transition={{ duration: 2, ease: "easeOut" }}
-                          className="absolute -z-0 top-8 -left-72 bg-[#FAFA33] w-[30rem] h-[30rem] donut-large"
+                          className="absolute -z-0 top-8 -left-36 md:-left-72 bg-[#FAFA33] w-[30rem] h-[30rem] donut-large"
                         />
           {features.map((feature, index) => (
             <motion.div
