@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.donut-large {
+  background: conic-gradient(from 45deg, #FAFA33 0deg, #FAFA33 270deg);
+  border-radius: 50%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.donut-large::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  background: #F5F5F5;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #F5F5F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.donut-medium {
+  background: conic-gradient(from 45deg, #FAFA33 0deg, #FAFA33 300deg);
+  border-radius: 50%;
+}
+
+.donut-medium::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  background: #F5F5F5;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #F5F5F5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
 }
+
+
+
+
+@media (max-width: 768px) {
+  .donut-large {
+    width: 200px !important;
+    height: 200px !important;
+    top: 20px !important;
+  }
+  
+  .donut-medium {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  
+
+}
+
+@media (max-width: 480px) {
+  .donut-large {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .donut-medium {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+
+img {
+  transition: opacity 0.3s ease;
+}
+
+.perspective {
+  perspective: 1500px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
